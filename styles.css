@@ -2,10 +2,35 @@
 /* CSS */
 html {
     font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+font-family:'Arvo', sans-serif;
+font-size: 3rem;
+font-weight:bold;
+margin-bottom: 1rem;
+}
+
+h2 {
+font-size: 2rem;
+margin-bottom: 2rem;
+}
+
+h3 {
+    font-size:1.8rem;
+    margin-bottom:1.5rem;
+    font-weight: bold;
+}
+
+h4 {
+    font-size:1.5rem;
+    margin-bottom:1.2rem;
+    font-weight: bold;
+    text-align: center;
 }
 
 button {
-  appearance: button;
   background-color: #000;
   background-image: none;
   border: 1px solid #000;
@@ -14,22 +39,125 @@ button {
   box-sizing: border-box;
   color: #fff;
   display: inline-block;
-  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
-  font-size: 14px;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   line-height: 20px;
   margin: 0 5px 10px 0;
-  overflow: visible;
   padding: 12px 40px;
   text-align: center;
-  text-transform: none;
 }
 
 a {
-    color: white;
+    color: black;
     text-decoration: none;
+}
+
+button a {
+    color: white;
 }
 
 ul {
     list-style-type: none;
 }
+
+/* Header */
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    padding: 40px 30px;
+    background-color: lightgreen;
+}
+
+nav img {
+    width:300px;
+}
+
+nav li {
+    display: inline-block;
+    padding-left:25px;
+    font-weight: bold;
+    transition: 0.5s ease-in;
+}
+
+nav li:hover {
+    opacity: 0.5;
+}
+
+main {
+    margin: 20px;
+}
+
+/* Hero box */
+.herobox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image:url(./images/img-beignes.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    padding: 25px 50px;
+    border-radius:30px;
+    margin-bottom: 20px;
+    box-shadow: lightgreen 4px 4px 0 0,#000 4px 4px 0 1px;
+    /* font */
+    color:white;
+    text-align: center;
+}
+
+/* Qui sommes nous */
+
+.qui-sommes-nous {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 50px;
+background-color: lightgreen;
+border-radius:30px;
+margin-bottom: 20px;
+}
+
+.qui-sommes-nous p {
+    text-align: center;
+}
+
+.qui-sommes-nous img {
+    width:100%;
+    height: 300px;
+    border-radius:30px;
+    box-shadow: lightgreen 4px 4px 0 0,#000 4px 4px 0 1px;
+    object-fit: cover;
+    margin-right:50px;
+    margin-bottom: 20px;
+}
+
+/* Menu */
+
+.menu {
+    display: grid;
+    gap:20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.elementMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu img {
+    width: 75%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius:30px;
+    box-shadow: lightgreen 4px 4px 0 0,#000 4px 4px 0 1px;
+}
+
+.menu p {
+    text-align: center;
+}
+
+/* Team */
