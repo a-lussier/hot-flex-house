@@ -5,11 +5,16 @@ html {
     font-family: 'Inter', sans-serif;
 }
 
+body {
+    background-color: beige;
+}
+
 h1 {
 font-family:'Arvo', sans-serif;
 font-size: 3rem;
 font-weight:bold;
 margin-bottom: 1rem;
+text-align: center;
 }
 
 h2 {
@@ -21,12 +26,17 @@ h3 {
     font-size:1.8rem;
     margin-bottom:1.5rem;
     font-weight: bold;
+    
 }
 
 h4 {
     font-size:1.5rem;
     margin-bottom:1.2rem;
     font-weight: bold;
+    text-align: center;
+}
+
+p {
     text-align: center;
 }
 
@@ -64,9 +74,11 @@ ul {
 
 nav {
     display:flex;
+    flex-direction: row;
     justify-content: space-between;
     padding: 40px 30px;
-    background-color: lightgreen;
+    background-color: beige;
+    border-bottom: 1px solid black;
 }
 
 nav img {
@@ -116,21 +128,8 @@ align-items: center;
 padding: 50px;
 background-color: lightgreen;
 border-radius:30px;
-margin-bottom: 20px;
-}
-
-.qui-sommes-nous p {
-    text-align: center;
-}
-
-.qui-sommes-nous img {
-    width:100%;
-    height: 300px;
-    border-radius:30px;
-    box-shadow: lightgreen 4px 4px 0 0,#000 4px 4px 0 1px;
-    object-fit: cover;
-    margin-right:50px;
-    margin-bottom: 20px;
+margin-bottom: 50px;
+box-shadow: black 4px 4px 0 0,#000 4px 4px 0 1px;
 }
 
 /* Menu */
@@ -138,13 +137,17 @@ margin-bottom: 20px;
 .menu {
     display: grid;
     gap:20px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, 400px);
+    justify-items: center;
+    justify-content: center;
+    margin: 50px 0 100px;
 }
 
 .elementMenu {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .menu img {
@@ -157,7 +160,89 @@ margin-bottom: 20px;
 }
 
 .menu p {
-    text-align: center;
+margin-bottom: 20px;
 }
 
 /* Team */
+
+.employee {
+    background-color: lightgreen;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius:30px;
+    margin-top: 30px;
+}
+
+.employee-card {
+    position: relative;
+    top:50px;
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 50px;
+    background-color: white;
+    box-shadow: lightgreen 4px 4px 0 0,#000 4px 4px 0 1px;
+    border-radius:30px;
+}
+
+.employee-card img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: beige;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+
+footer li {
+    display: inline-block;
+    padding-left:25px;
+    font-weight: bold;
+}
+
+@media screen and (max-width:920px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav img {
+        width:200px;
+        margin-bottom: 25px;
+    }
+    
+    .employee-card {
+        top:50px; 
+        padding: 25px;
+    }
+
+    footer {
+        display: block;
+        padding-bottom: 25px;
+    }
+
+    footer li {
+        display: block;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    footer p {
+        text-align: center;
+        margin-bottom: 10px;
+        padding-left: 0px;
+    }
+}
